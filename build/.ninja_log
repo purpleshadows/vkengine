@@ -1,0 +1,24 @@
+# ninja log v5
+35	54	0	F:/Vulkan/Vk/build/CMakeFiles/cmake.verify_globs	4295bbdb6a807618
+22	2537	7798486197983858	CMakeFiles/core.dir/Core/Device.cpp.obj	ea381aa639fd7115
+28	365	7798486175970685	shaders/shader.spv	28833d43a4da4b49
+23	2669	7798486199309032	CMakeFiles/core.dir/Core/Renderer.cpp.obj	31ce126c0c946f52
+28	365	7798486175970685	F:/Vulkan/Vk/build/shaders/shader.spv	28833d43a4da4b49
+20	564	7798486178266195	CMakeFiles/core.dir/Core/Backend/Pipeline.cpp.obj	cc06f1654b2ada07
+26	2399	7798486196608635	CMakeFiles/core.dir/Core/Swapchain.cpp.obj	94a5de384f069f51
+25	712	7798486179736370	CMakeFiles/core.dir/Core/ShaderLoader.cpp.obj	6d5b763ce7a8b72
+365	2705	7798486199674103	CMakeFiles/VkTutorial.dir/Main.cpp.obj	ccec5843a915d28d
+2669	2971	7798486202314263	libcore.a	b96b64bc5313bfb
+2971	3955	7798486207374815	VkTutorial.exe	9bc48835276592e
+54	475	7799267143516316	build.ninja	6c0598730c102c1d
+54	475	7799267143516316	F:/Vulkan/Vk/build/cmake_install.cmake	6c0598730c102c1d
+10	23	0	F:/Vulkan/Vk/build/CMakeFiles/cmake.verify_globs	4295bbdb6a807618
+47	5019	7799267193930485	CMakeFiles/VkTutorial.dir/Main.cpp.obj	ccec5843a915d28d
+43	5020	7799267193920451	CMakeFiles/core.dir/Core/Shaders/ShaderLoader.cpp.obj	c708a8dd702fc6e5
+45	5045	7799267194180628	CMakeFiles/core.dir/Core/Swapchain.cpp.obj	94a5de384f069f51
+40	5057	7799267194296340	CMakeFiles/core.dir/Core/Device.cpp.obj	ea381aa639fd7115
+41	5065	7799267194371490	CMakeFiles/core.dir/Core/Renderer.cpp.obj	31ce126c0c946f52
+11	24	0	F:/Vulkan/Vk/build/CMakeFiles/cmake.verify_globs	4295bbdb6a807618
+27	581	7799267793609269	CMakeFiles/core.dir/Core/Backend/Pipeline.cpp.obj	cc06f1654b2ada07
+582	1005	7799267797810379	libcore.a	bf8b3fdc2a376e45
+1006	4375	7799267804382250	VkTutorial.exe	9bc48835276592e

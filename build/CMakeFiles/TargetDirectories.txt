@@ -1,0 +1,5 @@
+F:/Vulkan/Vk/build/CMakeFiles/core.dir
+F:/Vulkan/Vk/build/CMakeFiles/VkTutorial.dir
+F:/Vulkan/Vk/build/CMakeFiles/compile_shaders.dir
+F:/Vulkan/Vk/build/CMakeFiles/edit_cache.dir
+F:/Vulkan/Vk/build/CMakeFiles/rebuild_cache.dir

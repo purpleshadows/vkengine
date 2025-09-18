@@ -1,0 +1,38 @@
+[
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Backend\\Pipeline.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Backend\\Pipeline.cpp",
+  "file": "F:/Vulkan/Vk/Core/Backend/Pipeline.cpp",
+  "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Backend/Pipeline.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Device.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Device.cpp",
+  "file": "F:/Vulkan/Vk/Core/Device.cpp",
+  "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Device.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Renderer.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Renderer.cpp",
+  "file": "F:/Vulkan/Vk/Core/Renderer.cpp",
+  "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Renderer.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\ShaderLoader.cpp.obj -c F:\\Vulkan\\Vk\\Core\\ShaderLoader.cpp",
+  "file": "F:/Vulkan/Vk/Core/ShaderLoader.cpp",
+  "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/ShaderLoader.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Swapchain.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Swapchain.cpp",
+  "file": "F:/Vulkan/Vk/Core/Swapchain.cpp",
+  "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Swapchain.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DGLFW_DLL -DGLFW_NO_API -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\VkTutorial.dir\\Main.cpp.obj -c F:\\Vulkan\\Vk\\Main.cpp",
+  "file": "F:/Vulkan/Vk/Main.cpp",
+  "output": "F:/Vulkan/Vk/build/CMakeFiles/VkTutorial.dir/Main.cpp.obj"
+}
+]
