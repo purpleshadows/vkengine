@@ -1,26 +1,29 @@
 #pragma once
-#include <filesystem>
-#include <vector>
-#include <string>
-#include <unordered_map>
-#include <cstdint>
+#include <Core/Device.h>
+#include <Core/Shaders/ShaderBlob.h>
+#include <Core/Shaders/ShaderCommon.h>
+#include <Core/Shaders/ShaderHandle.h>
+#include <Core/Shaders/ShaderKey.h>
+
+
 namespace Core::Shaders {
 class ShaderLoader {
-    public:
-    const std::vector<uint32_t> &loadSpirv(const std::filesystem::path &filepath);
+public:
+    explicit ShaderLoader(Device &device) : device_(device) {}
+    ShaderHandle get(const ShaderKey& key);
+    void pollAndReload(); // (optional; not shown here)
 
-    // clear the cache
-    void clearCache();
-    // Explicitly reload a specific shader (invalidate cache entry)
-    void reload(const std::filesystem::path &filepath);
+private:
+    Device &device_;
 
-    private:
-    struct CacheEntry {
-        std::vector<uint32_t> data;
-        std::filesystem::file_time_type lastWriteTime;
-    };
+    // contentHash -> blob (device-agnostic)
+    std::unordered_map<uint64_t, std::shared_ptr<ShaderBlob>> blobCache_;
 
-    // key = file path (string), value = cached SPIR-V data + timestamp
-    std::unordered_map<std::string, CacheEntry> cache_;
+    // (blobHash, device) -> module (device-specific)
+    std::unordered_map<uint64_t, std::shared_ptr<ShaderModule>> moduleCache_;
+
+    // ShaderKey -> ShaderHandle
+    std::unordered_map<ShaderKey, ShaderHandle, ShaderKeyHasher> liveHandles_;
+
 };
 }

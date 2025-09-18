@@ -11,7 +11,8 @@ public:
   Swapchain& operator=(const Swapchain&) = delete;
 
   Swapchain(Swapchain&&) noexcept = default;      // ok
-  Swapchain& operator=(Swapchain&&) = delete;  Swapchain(Device &device, vk::raii::SurfaceKHR &surface, GLFWwindow &window);
+  Swapchain& operator=(Swapchain&&) = delete;
+  Swapchain(Device &device, vk::raii::SurfaceKHR &surface, GLFWwindow &window);
 
 private:
   void createSwapchain();

@@ -19,8 +19,8 @@ target_sources(core
     Core/Backend/Pipeline.cpp
     Core/Device.cpp
     Core/Renderer.cpp
-    Core/Shaders/ShaderLoader.cpp
     Core/Swapchain.cpp
+    Core/Shaders/ShaderLoader.cpp
 )
 
 # Public headers (IDE/install friendly)
@@ -29,11 +29,16 @@ target_sources(core
     FILE_SET HEADERS
     BASE_DIRS Include
     FILES
+      Include/Core/Utils/Hash/Hash.h
       Include/Core/Backend/Pipeline.h
       Include/Core/Device.h
       Include/Core/Renderer.h
-      Include/Core/Shaders/ShaderLoader.h
       Include/Core/Swapchain.h
+      Include/Core/Shaders/ShaderLoader.h
+      Include/Core/Shaders/ShaderModule.h
+      Include/Core/Shaders/ShaderBlob.h
+      Include/Core/Shaders/ShaderCommon.h
+      Include/Core/Shaders/ShaderKey.h
 )
 
 # Expose "Include/" as the include root

@@ -1,14 +1,17 @@
-#include "Include/Core/Renderer.h"
-
+#include <Core/Renderer.h>
+#include <glslang/Public/ShaderLang.h>
 #include <cstdlib>
 #include <iostream>
-#include <stdexcept>
+
+void InitGlslang() { glslang::InitializeProcess(); }
+void ShutdownGlslang(){ glslang::FinalizeProcess(); }
 
 int main() {
-  Core::Renderer renderer;
+
+  Core::Renderer r;
 
   try {
-    renderer.run();
+    r.run();
   } catch (const std::exception &e) {
     std::cerr << e.what() << std::endl;
     return EXIT_FAILURE;
