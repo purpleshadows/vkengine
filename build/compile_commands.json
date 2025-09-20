@@ -1,38 +1,374 @@
 [
 {
   "directory": "F:/Vulkan/Vk/build",
-  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Backend\\Pipeline.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Backend\\Pipeline.cpp",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Backend\\Pipeline.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Backend\\Pipeline.cpp",
   "file": "F:/Vulkan/Vk/Core/Backend/Pipeline.cpp",
   "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Backend/Pipeline.cpp.obj"
 },
 {
   "directory": "F:/Vulkan/Vk/build",
-  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Device.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Device.cpp",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Device.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Device.cpp",
   "file": "F:/Vulkan/Vk/Core/Device.cpp",
   "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Device.cpp.obj"
 },
 {
   "directory": "F:/Vulkan/Vk/build",
-  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Renderer.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Renderer.cpp",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Renderer.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Renderer.cpp",
   "file": "F:/Vulkan/Vk/Core/Renderer.cpp",
   "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Renderer.cpp.obj"
 },
 {
   "directory": "F:/Vulkan/Vk/build",
-  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Shaders\\ShaderLoader.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Shaders\\ShaderLoader.cpp",
-  "file": "F:/Vulkan/Vk/Core/Shaders/ShaderLoader.cpp",
-  "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Shaders/ShaderLoader.cpp.obj"
-},
-{
-  "directory": "F:/Vulkan/Vk/build",
-  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Swapchain.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Swapchain.cpp",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Swapchain.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Swapchain.cpp",
   "file": "F:/Vulkan/Vk/Core/Swapchain.cpp",
   "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Swapchain.cpp.obj"
 },
 {
   "directory": "F:/Vulkan/Vk/build",
-  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DGLFW_DLL -DGLFW_NO_API -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\VkTutorial.dir\\Main.cpp.obj -c F:\\Vulkan\\Vk\\Main.cpp",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\core.dir\\Core\\Shaders\\ShaderLoader.cpp.obj -c F:\\Vulkan\\Vk\\Core\\Shaders\\ShaderLoader.cpp",
+  "file": "F:/Vulkan/Vk/Core/Shaders/ShaderLoader.cpp",
+  "output": "F:/Vulkan/Vk/build/CMakeFiles/core.dir/Core/Shaders/ShaderLoader.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DGLFW_DLL -DGLFW_NO_API -DVULKAN_HPP_NO_CONSTRUCTORS -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include -std=gnu++2a -Wall -Wextra -Wpedantic -o CMakeFiles\\VkTutorial.dir\\Main.cpp.obj -c F:\\Vulkan\\Vk\\Main.cpp",
   "file": "F:/Vulkan/Vk/Main.cpp",
   "output": "F:/Vulkan/Vk/build/CMakeFiles/VkTutorial.dir/Main.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\SPIRV\\CMakeFiles\\SPIRV.dir\\__\\glslang\\stub.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\stub.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/stub.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/SPIRV/CMakeFiles/SPIRV.dir/__/glslang/stub.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\SPIRV\\CMakeFiles\\SPVRemapper.dir\\SPVRemapper.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\SPVRemapper.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/SPVRemapper.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/SPIRV/CMakeFiles/SPVRemapper.dir/SPVRemapper.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\SPIRV\\CMakeFiles\\SPVRemapper.dir\\doc.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\doc.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/doc.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/SPIRV/CMakeFiles/SPVRemapper.dir/doc.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\GenericCodeGen.dir\\stub.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\stub.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/stub.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/GenericCodeGen.dir/stub.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\MachineIndependent.dir\\stub.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\stub.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/stub.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/MachineIndependent.dir/stub.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\CInterface\\glslang_c_interface.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\CInterface\\glslang_c_interface.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/CInterface/glslang_c_interface.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/CInterface/glslang_c_interface.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\GenericCodeGen\\CodeGen.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\GenericCodeGen\\CodeGen.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/GenericCodeGen/CodeGen.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/GenericCodeGen/CodeGen.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\GenericCodeGen\\Link.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\GenericCodeGen\\Link.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/GenericCodeGen/Link.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/GenericCodeGen/Link.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\OSDependent\\Windows\\ossource.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\OSDependent\\Windows\\ossource.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/OSDependent/Windows/ossource.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/OSDependent/Windows/ossource.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -Wno-unused-but-set-variable -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\glslang_tab.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\glslang_tab.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/glslang_tab.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/glslang_tab.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\attribute.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\attribute.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/attribute.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/attribute.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\Constant.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\Constant.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Constant.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Constant.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\iomapper.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\iomapper.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/iomapper.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/iomapper.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\InfoSink.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\InfoSink.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/InfoSink.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/InfoSink.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\Initialize.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\Initialize.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Initialize.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Initialize.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\IntermTraverse.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\IntermTraverse.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/IntermTraverse.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/IntermTraverse.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\Intermediate.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\Intermediate.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Intermediate.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Intermediate.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\ParseContextBase.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\ParseContextBase.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/ParseContextBase.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ParseContextBase.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\ParseHelper.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\ParseHelper.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/ParseHelper.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ParseHelper.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\PoolAlloc.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\PoolAlloc.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/PoolAlloc.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/PoolAlloc.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\RemoveTree.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\RemoveTree.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/RemoveTree.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/RemoveTree.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\Scan.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\Scan.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Scan.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Scan.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\ShaderLang.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\ShaderLang.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/ShaderLang.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ShaderLang.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\SpirvIntrinsics.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\SpirvIntrinsics.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/SpirvIntrinsics.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/SpirvIntrinsics.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\SymbolTable.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\SymbolTable.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/SymbolTable.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/SymbolTable.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\Versions.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\Versions.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Versions.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Versions.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\intermOut.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\intermOut.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/intermOut.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/intermOut.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\limits.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\limits.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/limits.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/limits.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\linkValidate.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\linkValidate.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/linkValidate.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/linkValidate.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\parseConst.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\parseConst.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/parseConst.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/parseConst.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\reflection.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\reflection.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/reflection.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/reflection.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\preprocessor\\Pp.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\preprocessor\\Pp.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/Pp.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/Pp.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\preprocessor\\PpAtom.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\preprocessor\\PpAtom.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/PpAtom.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpAtom.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\preprocessor\\PpContext.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\preprocessor\\PpContext.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/PpContext.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpContext.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\preprocessor\\PpScanner.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\preprocessor\\PpScanner.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/PpScanner.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpScanner.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\preprocessor\\PpTokens.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\preprocessor\\PpTokens.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/PpTokens.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpTokens.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\MachineIndependent\\propagateNoContraction.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\MachineIndependent\\propagateNoContraction.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/propagateNoContraction.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/propagateNoContraction.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\HLSL\\hlslAttributes.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\HLSL\\hlslAttributes.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslAttributes.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslAttributes.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\HLSL\\hlslParseHelper.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\HLSL\\hlslParseHelper.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslParseHelper.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslParseHelper.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\HLSL\\hlslScanContext.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\HLSL\\hlslScanContext.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslScanContext.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslScanContext.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\HLSL\\hlslOpMap.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\HLSL\\hlslOpMap.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslOpMap.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslOpMap.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\HLSL\\hlslTokenStream.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\HLSL\\hlslTokenStream.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslTokenStream.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslTokenStream.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\HLSL\\hlslGrammar.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\HLSL\\hlslGrammar.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslGrammar.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslGrammar.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\HLSL\\hlslParseables.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\HLSL\\hlslParseables.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslParseables.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslParseables.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\GlslangToSpv.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\GlslangToSpv.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/GlslangToSpv.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/GlslangToSpv.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\InReadableOrder.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\InReadableOrder.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/InReadableOrder.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/InReadableOrder.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\Logger.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\Logger.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/Logger.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/Logger.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\SpvBuilder.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\SpvBuilder.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/SpvBuilder.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvBuilder.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\SpvPostProcess.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\SpvPostProcess.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/SpvPostProcess.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvPostProcess.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\doc.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\doc.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/doc.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/doc.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\SpvTools.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\SpvTools.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/SpvTools.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvTools.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\disassemble.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\disassemble.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/disassemble.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/disassemble.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang.dir\\__\\SPIRV\\CInterface\\spirv_c_interface.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\SPIRV\\CInterface\\spirv_c_interface.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/CInterface/spirv_c_interface.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/CInterface/spirv_c_interface.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang-default-resource-limits.dir\\ResourceLimits\\ResourceLimits.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\ResourceLimits\\ResourceLimits.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/ResourceLimits/ResourceLimits.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang-default-resource-limits.dir/ResourceLimits/ResourceLimits.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\CMakeFiles\\glslang-default-resource-limits.dir\\ResourceLimits\\resource_limits_c.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\ResourceLimits\\resource_limits_c.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/ResourceLimits/resource_limits_c.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/CMakeFiles/glslang-default-resource-limits.dir/ResourceLimits/resource_limits_c.cpp.obj"
+},
+{
+  "directory": "F:/Vulkan/Vk/build",
+  "command": "C:\\TDM-GCC-64\\bin\\c++.exe -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32 -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -o _deps\\glslang-build\\glslang\\OSDependent\\Windows\\CMakeFiles\\OSDependent.dir\\__\\__\\stub.cpp.obj -c F:\\Vulkan\\Vk\\build\\_deps\\glslang-src\\glslang\\stub.cpp",
+  "file": "F:/Vulkan/Vk/build/_deps/glslang-src/glslang/stub.cpp",
+  "output": "F:/Vulkan/Vk/build/_deps/glslang-build/glslang/OSDependent/Windows/CMakeFiles/OSDependent.dir/__/__/stub.cpp.obj"
 }
 ]

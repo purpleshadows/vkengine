@@ -1,0 +1,11 @@
+{
+    "name": "vktutorial",
+    "version-string": "0.1.0",
+    "dependencies": [
+        "vulkan",
+        "glfw3",
+        "glslang",
+        "spirv-tools"
+    ],
+    "builtin-baseline": "b5f3a3b5f5a2d1d6f6ac9c2b2b8a2d2c8e9a0c0a"
+}

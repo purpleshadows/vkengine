@@ -1,5 +1,6 @@
 #include <glslang/Public/ShaderLang.h>
-#include <SPIRV/GlslangToSpv.h>
+#include <glslang/SPIRV/GlslangToSpv.h>
+
 namespace Core::Shaders {
 
     enum class Stage : uint8_t { Vertex, Fragment, Compute, Geometry, TessCtrl, TessEval };
@@ -15,4 +16,6 @@ namespace Core::Shaders {
         }
         return EShLangVertex;
     }
+
+
 }

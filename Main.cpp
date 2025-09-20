@@ -4,19 +4,21 @@
 #include <iostream>
 
 void InitGlslang() { glslang::InitializeProcess(); }
-void ShutdownGlslang(){ glslang::FinalizeProcess(); }
+void ShutdownGlslang() { glslang::FinalizeProcess(); }
 
 int main() {
+    InitGlslang();
+    Core::Renderer r;
 
-  Core::Renderer r;
+    try {
+        r.run();
+    }
+    catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }
 
-  try {
-    r.run();
-  } catch (const std::exception &e) {
-    std::cerr << e.what() << std::endl;
-    return EXIT_FAILURE;
-  }
 
-  return EXIT_SUCCESS;
-
+    ShutdownGlslang();
+    return EXIT_SUCCESS;
 }

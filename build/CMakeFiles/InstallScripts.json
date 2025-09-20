@@ -1,7 +1,12 @@
 {
 	"InstallScripts" : 
 	[
-		"F:/Vulkan/Vk/build/cmake_install.cmake"
+		"F:/Vulkan/Vk/build/cmake_install.cmake",
+		"F:/Vulkan/Vk/build/_deps/glslang-build/cmake_install.cmake",
+		"F:/Vulkan/Vk/build/_deps/glslang-build/External/cmake_install.cmake",
+		"F:/Vulkan/Vk/build/_deps/glslang-build/SPIRV/cmake_install.cmake",
+		"F:/Vulkan/Vk/build/_deps/glslang-build/glslang/cmake_install.cmake",
+		"F:/Vulkan/Vk/build/_deps/glslang-build/glslang/OSDependent/Windows/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.opendb
+*.VC.db
+*.ipch
+
+# CMake/Build
+build/
+out/
+Debug/
+Release/
+x64/
+x86/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json

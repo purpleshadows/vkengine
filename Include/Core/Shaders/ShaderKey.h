@@ -6,6 +6,8 @@
 #include <initializer_list>
 #include <algorithm>
 #include <cstdint>
+#include <Core/Shaders/ShaderCommon.h>
+#include <Core/Utils/Hash/Hash.h>
 
 namespace Core::Shaders {
 
@@ -16,17 +18,17 @@ struct ShaderKey {
     uint64_t    optionsHash = 0;   // computed internally
 
     // 1) If you already have a precomputed hash
-    ShaderKey(std::string path, Stage st, std::string entryName, uint64_t prehashed) 
+    ShaderKey(std::string path, Stage st, std::string entryName, uint64_t prehashed)
       : canonicalPath(std::move(path)), stage(st), entry(std::move(entryName)), optionsHash(prehashed) {}
 
     // 2) Pass raw defines; hash inside (initializer_list is perfect for brace lists)
-    ShaderKey(std::string path, Stage st, std::string entryName,
+    ShaderKey(std::string path, Stage  st, std::string entryName,
               std::initializer_list<std::string_view> defines)
       : canonicalPath(std::move(path)), stage(st), entry(std::move(entryName)),
         optionsHash(makeOptionsHash(defines)) {}
 
     // 3) Vector overload if you build the list elsewhere
-    ShaderKey(std::string path, Stage st, std::string entryName,
+    ShaderKey(std::string path, Stage  st, std::string entryName,
               const std::vector<std::string>& defines)
       : canonicalPath(std::move(path)), stage(st), entry(std::move(entryName)),
         optionsHash(makeOptionsHash(defines)) {}
@@ -41,7 +43,7 @@ private:
         std::string joined;
         joined.reserve(tmp.size() * 16);
         for (auto d : tmp) { joined.append(d.data(), d.size()); joined.push_back('\n'); }
-        return Core::Hash::fnv1a(joined);
+        return Hash::fnv1a(joined);
     }
 
     static uint64_t makeOptionsHash(const std::vector<std::string>& defines) {
@@ -50,17 +52,17 @@ private:
         std::string joined;
         joined.reserve(tmp.size() * 16);
         for (auto& d : tmp) { joined += d; joined.push_back('\n'); }
-        return Core::Hash::fnv1a(joined);
+        return Hash::fnv1a(joined);
     }
 };
 
 struct ShaderKeyHasher {
     std::size_t operator()(ShaderKey const& k) const noexcept {
         std::size_t h = 0;
-        Core::Hash::combine(h, std::hash<std::string>{}(k.canonicalPath));
-        Core::Hash::combine(h, std::hash<std::string>{}(k.entry));
-        Core::Hash::combine(h, std::hash<uint8_t>{}(static_cast<uint8_t>(k.stage)));
-        Core::Hash::combine(h, std::hash<uint64_t>{}(k.optionsHash));
+        Hash::combine(h, std::hash<std::string>{}(k.canonicalPath));
+        Hash::combine(h, std::hash<std::string>{}(k.entry));
+        Hash::combine(h, std::hash<uint8_t>{}(static_cast<uint8_t>(k.stage)));
+        Hash::combine(h, std::hash<uint64_t>{}(k.optionsHash));
         return h;
     }
 };

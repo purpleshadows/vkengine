@@ -1,45 +1,30 @@
 // Core/Shaders/ShaderModule.hpp
 #pragma once
-#include <vulkan/vulkan.h>
+#include <Core/Device.h>
 #include <cstdint>
-
-//check home
+#include <vulkan/vulkan.hpp>
+#include <vulkan/vulkan_raii.hpp>
+// check home
 namespace Core::Shaders {
+    struct ShaderModule {
+        vk::raii::ShaderModule module = nullptr; // owns/destroys VkShaderModule
+        uint64_t blobHash = 0;
 
-struct ShaderModule {
-    VkShaderModule vkModule = VK_NULL_HANDLE;
-    VkDevice       device   = VK_NULL_HANDLE;  // not owned
-    uint64_t       blobHash = 0;               // link to ShaderBlob's contentHash
+        ShaderModule() = default;
 
-    ShaderModule() = default;
-    ShaderModule(VkDevice dev, VkShaderModule mod, uint64_t hash)
-        : vkModule(mod), device(dev), blobHash(hash) {}
-
-    ShaderModule(const ShaderModule&)            = delete;
-    ShaderModule& operator=(const ShaderModule&) = delete;
-
-    ShaderModule(ShaderModule&& other) noexcept
-        : vkModule(other.vkModule), device(other.device), blobHash(other.blobHash) {
-        other.vkModule = VK_NULL_HANDLE; other.device = VK_NULL_HANDLE; other.blobHash = 0;
-    }
-    ShaderModule& operator=(ShaderModule&& other) noexcept {
-        if (this != &other) {
-            destroy();
-            vkModule = other.vkModule; device = other.device; blobHash = other.blobHash;
-            other.vkModule = VK_NULL_HANDLE; other.device = VK_NULL_HANDLE; other.blobHash = 0;
+        ShaderModule(Core::Device const& dev, vk::ShaderModuleCreateInfo const& ci,
+            uint64_t hash)
+            : module{ dev.vkDevice(), ci }, blobHash{ hash } {
         }
-        return *this;
-    }
 
-    ~ShaderModule() { destroy(); }
+        // convenience when you need the raw VkShaderModule
+        vk::ShaderModule raw() const noexcept { return *module; }
 
-private:
-    void destroy() noexcept {
-        if (vkModule != VK_NULL_HANDLE && device != VK_NULL_HANDLE) {
-            vkDestroyShaderModule(device, vkModule, nullptr);
-            vkModule = VK_NULL_HANDLE;
-        }
-    }
-};
+        // move-only (vk::raii::ShaderModule is already move-only)
+        ShaderModule(ShaderModule&&) noexcept = default;
+        ShaderModule& operator=(ShaderModule&&) noexcept = default;
 
+        ShaderModule(const ShaderModule&) = delete;
+        ShaderModule& operator=(const ShaderModule&) = delete;
+    };
 } // namespace Core::Shaders

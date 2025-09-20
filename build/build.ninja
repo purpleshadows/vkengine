@@ -18,7 +18,7 @@
 #############################################
 # Minimal version of Ninja required by this file
 
-ninja_required_version = 1.8
+ninja_required_version = 1.5
 
 # =============================================================================
 # Include auxiliary files.
@@ -42,13 +42,13 @@ cmake_ninja_workdir = F$:/Vulkan/Vk/build/
 #############################################
 # Order-only phony target for core
 
-build cmake_object_order_depends_target_core: phony || .
+build cmake_object_order_depends_target_core: phony || cmake_object_order_depends_target_SPIRV cmake_object_order_depends_target_glslang
 
 build CMakeFiles/core.dir/Core/Backend/Pipeline.cpp.obj: CXX_COMPILER__core_unscanned_ F$:/Vulkan/Vk/Core/Backend/Pipeline.cpp || cmake_object_order_depends_target_core
   DEFINES = -DVULKAN_HPP_NO_CONSTRUCTORS
   DEP_FILE = CMakeFiles\core.dir\Core\Backend\Pipeline.cpp.obj.d
   FLAGS = -std=gnu++2a -Wall -Wextra -Wpedantic
-  INCLUDES = -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
+  INCLUDES = -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\core.dir
   OBJECT_FILE_DIR = CMakeFiles\core.dir\Core\Backend
 
@@ -56,7 +56,7 @@ build CMakeFiles/core.dir/Core/Device.cpp.obj: CXX_COMPILER__core_unscanned_ F$:
   DEFINES = -DVULKAN_HPP_NO_CONSTRUCTORS
   DEP_FILE = CMakeFiles\core.dir\Core\Device.cpp.obj.d
   FLAGS = -std=gnu++2a -Wall -Wextra -Wpedantic
-  INCLUDES = -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
+  INCLUDES = -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\core.dir
   OBJECT_FILE_DIR = CMakeFiles\core.dir\Core
 
@@ -64,7 +64,15 @@ build CMakeFiles/core.dir/Core/Renderer.cpp.obj: CXX_COMPILER__core_unscanned_ F
   DEFINES = -DVULKAN_HPP_NO_CONSTRUCTORS
   DEP_FILE = CMakeFiles\core.dir\Core\Renderer.cpp.obj.d
   FLAGS = -std=gnu++2a -Wall -Wextra -Wpedantic
-  INCLUDES = -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
+  INCLUDES = -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
+  OBJECT_DIR = CMakeFiles\core.dir
+  OBJECT_FILE_DIR = CMakeFiles\core.dir\Core
+
+build CMakeFiles/core.dir/Core/Swapchain.cpp.obj: CXX_COMPILER__core_unscanned_ F$:/Vulkan/Vk/Core/Swapchain.cpp || cmake_object_order_depends_target_core
+  DEFINES = -DVULKAN_HPP_NO_CONSTRUCTORS
+  DEP_FILE = CMakeFiles\core.dir\Core\Swapchain.cpp.obj.d
+  FLAGS = -std=gnu++2a -Wall -Wextra -Wpedantic
+  INCLUDES = -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\core.dir
   OBJECT_FILE_DIR = CMakeFiles\core.dir\Core
 
@@ -72,17 +80,9 @@ build CMakeFiles/core.dir/Core/Shaders/ShaderLoader.cpp.obj: CXX_COMPILER__core_
   DEFINES = -DVULKAN_HPP_NO_CONSTRUCTORS
   DEP_FILE = CMakeFiles\core.dir\Core\Shaders\ShaderLoader.cpp.obj.d
   FLAGS = -std=gnu++2a -Wall -Wextra -Wpedantic
-  INCLUDES = -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
+  INCLUDES = -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\core.dir
   OBJECT_FILE_DIR = CMakeFiles\core.dir\Core\Shaders
-
-build CMakeFiles/core.dir/Core/Swapchain.cpp.obj: CXX_COMPILER__core_unscanned_ F$:/Vulkan/Vk/Core/Swapchain.cpp || cmake_object_order_depends_target_core
-  DEFINES = -DVULKAN_HPP_NO_CONSTRUCTORS
-  DEP_FILE = CMakeFiles\core.dir\Core\Swapchain.cpp.obj.d
-  FLAGS = -std=gnu++2a -Wall -Wextra -Wpedantic
-  INCLUDES = -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
-  OBJECT_DIR = CMakeFiles\core.dir
-  OBJECT_FILE_DIR = CMakeFiles\core.dir\Core
 
 
 # =============================================================================
@@ -92,7 +92,7 @@ build CMakeFiles/core.dir/Core/Swapchain.cpp.obj: CXX_COMPILER__core_unscanned_ 
 #############################################
 # Link the static library libcore.a
 
-build libcore.a: CXX_STATIC_LIBRARY_LINKER__core_ CMakeFiles/core.dir/Core/Backend/Pipeline.cpp.obj CMakeFiles/core.dir/Core/Device.cpp.obj CMakeFiles/core.dir/Core/Renderer.cpp.obj CMakeFiles/core.dir/Core/Shaders/ShaderLoader.cpp.obj CMakeFiles/core.dir/Core/Swapchain.cpp.obj
+build libcore.a: CXX_STATIC_LIBRARY_LINKER__core_ CMakeFiles/core.dir/Core/Backend/Pipeline.cpp.obj CMakeFiles/core.dir/Core/Device.cpp.obj CMakeFiles/core.dir/Core/Renderer.cpp.obj CMakeFiles/core.dir/Core/Swapchain.cpp.obj CMakeFiles/core.dir/Core/Shaders/ShaderLoader.cpp.obj || _deps/glslang-build/SPIRV/libSPIRV.a _deps/glslang-build/glslang/libglslang.a
   OBJECT_DIR = CMakeFiles\core.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -106,13 +106,13 @@ build libcore.a: CXX_STATIC_LIBRARY_LINKER__core_ CMakeFiles/core.dir/Core/Backe
 #############################################
 # Order-only phony target for VkTutorial
 
-build cmake_object_order_depends_target_VkTutorial: phony || cmake_object_order_depends_target_core compile_shaders
+build cmake_object_order_depends_target_VkTutorial: phony || cmake_object_order_depends_target_SPIRV cmake_object_order_depends_target_core cmake_object_order_depends_target_glslang
 
 build CMakeFiles/VkTutorial.dir/Main.cpp.obj: CXX_COMPILER__VkTutorial_unscanned_ F$:/Vulkan/Vk/Main.cpp || cmake_object_order_depends_target_VkTutorial
   DEFINES = -DGLFW_DLL -DGLFW_NO_API -DVULKAN_HPP_NO_CONSTRUCTORS
   DEP_FILE = CMakeFiles\VkTutorial.dir\Main.cpp.obj.d
   FLAGS = -std=gnu++2a -Wall -Wextra -Wpedantic
-  INCLUDES = -IF:/Vulkan/Vk/Include -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
+  INCLUDES = -IF:/Vulkan/Vk/Include -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -isystem F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\VkTutorial.dir
   OBJECT_FILE_DIR = CMakeFiles\VkTutorial.dir
 
@@ -124,20 +124,14 @@ build CMakeFiles/VkTutorial.dir/Main.cpp.obj: CXX_COMPILER__VkTutorial_unscanned
 #############################################
 # Link the executable VkTutorial.exe
 
-build VkTutorial.exe: CXX_EXECUTABLE_LINKER__VkTutorial_ CMakeFiles/VkTutorial.dir/Main.cpp.obj | libcore.a F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/debug/lib/libglfw3dll.a C$:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib || compile_shaders libcore.a
-  LINK_LIBRARIES = libcore.a  F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/debug/lib/libglfw3dll.a  C:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build VkTutorial.exe: CXX_EXECUTABLE_LINKER__VkTutorial_ CMakeFiles/VkTutorial.dir/Main.cpp.obj | libcore.a F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/debug/lib/libglfw3dll.a C$:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib _deps/glslang-build/SPIRV/libSPIRV.a _deps/glslang-build/glslang/libglslang.a || _deps/glslang-build/SPIRV/libSPIRV.a _deps/glslang-build/glslang/libglslang.a libcore.a
+  LINK_LIBRARIES = libcore.a  F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/debug/lib/libglfw3dll.a  C:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib  _deps/glslang-build/SPIRV/libSPIRV.a  _deps/glslang-build/glslang/libglslang.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\VkTutorial.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file F:/vcpkg-2025.08.27/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary F:/Vulkan/Vk/build/VkTutorial.exe -installedDir F:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_FILE = VkTutorial.exe
   TARGET_IMPLIB = libVkTutorial.dll.a
   TARGET_PDB = VkTutorial.exe.dbg
-
-
-#############################################
-# Utility command for compile_shaders
-
-build compile_shaders: phony CMakeFiles/compile_shaders shaders/shader.spv
 
 
 #############################################
@@ -163,27 +157,867 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# F:/Vulkan/Vk/CMakeLists.txt
+# =============================================================================
+
 
 #############################################
-# Phony custom command for CMakeFiles\compile_shaders
+# Utility command for edit_cache
 
-build CMakeFiles/compile_shaders | ${cmake_ninja_workdir}CMakeFiles/compile_shaders: phony shaders/shader.spv
-
-
-#############################################
-# Custom command for shaders\shader.spv
-
-build shaders/shader.spv | ${cmake_ninja_workdir}shaders/shader.spv: CUSTOM_COMMAND F$:/Vulkan/Vk/shaders/shader.slang
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk && C:\VulkanSDK\1.4.321.1\Bin\slangc.exe F:/Vulkan/Vk/shaders/shader.slang -target spirv -profile spirv_1_4 -emit-spirv-directly -fvk-use-entrypoint-name -entry vertMain -entry fragMain -o F:/Vulkan/Vk/build/shaders/shader.spv"
-  DESC = slangc F:/Vulkan/Vk/shaders/shader.slang -> F:/Vulkan/Vk/build/shaders/shader.spv
+build _deps/glslang-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build && "C:\Program Files\CMake\bin\cmake-gui.exe" -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
+
+build _deps/glslang-build/edit_cache: phony _deps/glslang-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glslang-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/rebuild_cache: phony _deps/glslang-build/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# F:/Vulkan/Vk/build/_deps/glslang-src/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glslang-build/External/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build\External && "C:\Program Files\CMake\bin\cmake-gui.exe" -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/External/edit_cache: phony _deps/glslang-build/External/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glslang-build/External/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build\External && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/External/rebuild_cache: phony _deps/glslang-build/External/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# F:/Vulkan/Vk/build/_deps/glslang-src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target SPIRV
+
+
+#############################################
+# Order-only phony target for SPIRV
+
+build cmake_object_order_depends_target_SPIRV: phony || cmake_object_order_depends_target_glslang
+
+build _deps/glslang-build/SPIRV/CMakeFiles/SPIRV.dir/__/glslang/stub.cpp.obj: CXX_COMPILER__SPIRV_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/stub.cpp || cmake_object_order_depends_target_SPIRV
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\SPIRV\CMakeFiles\SPIRV.dir\__\glslang\stub.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/.. -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\SPIRV\CMakeFiles\SPIRV.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\SPIRV\CMakeFiles\SPIRV.dir\__\glslang
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target SPIRV
+
+
+#############################################
+# Link the static library _deps\glslang-build\SPIRV\libSPIRVd.a
+
+build _deps/glslang-build/SPIRV/libSPIRVd.a: CXX_STATIC_LIBRARY_LINKER__SPIRV_Debug _deps/glslang-build/SPIRV/CMakeFiles/SPIRV.dir/__/glslang/stub.cpp.obj || _deps/glslang-build/glslang/libglslangd.a
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps\glslang-build\SPIRV\CMakeFiles\SPIRV.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = _deps\glslang-build\SPIRV\libSPIRVd.a
+  TARGET_PDB = SPIRVd.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target SPVRemapper
+
+
+#############################################
+# Order-only phony target for SPVRemapper
+
+build cmake_object_order_depends_target_SPVRemapper: phony || .
+
+build _deps/glslang-build/SPIRV/CMakeFiles/SPVRemapper.dir/SPVRemapper.cpp.obj: CXX_COMPILER__SPVRemapper_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/SPVRemapper.cpp || cmake_object_order_depends_target_SPVRemapper
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\SPIRV\CMakeFiles\SPVRemapper.dir\SPVRemapper.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  OBJECT_DIR = _deps\glslang-build\SPIRV\CMakeFiles\SPVRemapper.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\SPIRV\CMakeFiles\SPVRemapper.dir
+
+build _deps/glslang-build/SPIRV/CMakeFiles/SPVRemapper.dir/doc.cpp.obj: CXX_COMPILER__SPVRemapper_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/doc.cpp || cmake_object_order_depends_target_SPVRemapper
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\SPIRV\CMakeFiles\SPVRemapper.dir\doc.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  OBJECT_DIR = _deps\glslang-build\SPIRV\CMakeFiles\SPVRemapper.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\SPIRV\CMakeFiles\SPVRemapper.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target SPVRemapper
+
+
+#############################################
+# Link the static library _deps\glslang-build\SPIRV\libSPVRemapperd.a
+
+build _deps/glslang-build/SPIRV/libSPVRemapperd.a: CXX_STATIC_LIBRARY_LINKER__SPVRemapper_Debug _deps/glslang-build/SPIRV/CMakeFiles/SPVRemapper.dir/SPVRemapper.cpp.obj _deps/glslang-build/SPIRV/CMakeFiles/SPVRemapper.dir/doc.cpp.obj
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps\glslang-build\SPIRV\CMakeFiles\SPVRemapper.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = _deps\glslang-build\SPIRV\libSPVRemapperd.a
+  TARGET_PDB = SPVRemapperd.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glslang-build/SPIRV/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build\SPIRV && "C:\Program Files\CMake\bin\cmake-gui.exe" -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/SPIRV/edit_cache: phony _deps/glslang-build/SPIRV/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glslang-build/SPIRV/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build\SPIRV && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/SPIRV/rebuild_cache: phony _deps/glslang-build/SPIRV/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# F:/Vulkan/Vk/build/_deps/glslang-src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target GenericCodeGen
+
+
+#############################################
+# Order-only phony target for GenericCodeGen
+
+build cmake_object_order_depends_target_GenericCodeGen: phony || .
+
+build _deps/glslang-build/glslang/CMakeFiles/GenericCodeGen.dir/stub.cpp.obj: CXX_COMPILER__GenericCodeGen_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/stub.cpp || cmake_object_order_depends_target_GenericCodeGen
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\GenericCodeGen.dir\stub.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\GenericCodeGen.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\GenericCodeGen.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target GenericCodeGen
+
+
+#############################################
+# Link the static library _deps\glslang-build\glslang\libGenericCodeGend.a
+
+build _deps/glslang-build/glslang/libGenericCodeGend.a: CXX_STATIC_LIBRARY_LINKER__GenericCodeGen_Debug _deps/glslang-build/glslang/CMakeFiles/GenericCodeGen.dir/stub.cpp.obj
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\GenericCodeGen.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = _deps\glslang-build\glslang\libGenericCodeGend.a
+  TARGET_PDB = GenericCodeGend.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target MachineIndependent
+
+
+#############################################
+# Order-only phony target for MachineIndependent
+
+build cmake_object_order_depends_target_MachineIndependent: phony || cmake_object_order_depends_target_glslang
+
+build _deps/glslang-build/glslang/CMakeFiles/MachineIndependent.dir/stub.cpp.obj: CXX_COMPILER__MachineIndependent_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/stub.cpp || cmake_object_order_depends_target_MachineIndependent
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\MachineIndependent.dir\stub.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\MachineIndependent.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\MachineIndependent.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target MachineIndependent
+
+
+#############################################
+# Link the static library _deps\glslang-build\glslang\libMachineIndependentd.a
+
+build _deps/glslang-build/glslang/libMachineIndependentd.a: CXX_STATIC_LIBRARY_LINKER__MachineIndependent_Debug _deps/glslang-build/glslang/CMakeFiles/MachineIndependent.dir/stub.cpp.obj || _deps/glslang-build/glslang/libglslangd.a
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\MachineIndependent.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = _deps\glslang-build\glslang\libMachineIndependentd.a
+  TARGET_PDB = MachineIndependentd.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glslang
+
+
+#############################################
+# Order-only phony target for glslang
+
+build cmake_object_order_depends_target_glslang: phony || .
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/CInterface/glslang_c_interface.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/CInterface/glslang_c_interface.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\CInterface\glslang_c_interface.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\CInterface
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/GenericCodeGen/CodeGen.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/GenericCodeGen/CodeGen.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\GenericCodeGen\CodeGen.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\GenericCodeGen
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/GenericCodeGen/Link.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/GenericCodeGen/Link.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\GenericCodeGen\Link.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\GenericCodeGen
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/OSDependent/Windows/ossource.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/OSDependent/Windows/ossource.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\OSDependent\Windows\ossource.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\OSDependent\Windows
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/glslang_tab.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/glslang_tab.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\glslang_tab.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy -Wno-unused-but-set-variable
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/attribute.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/attribute.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\attribute.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Constant.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Constant.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\Constant.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/iomapper.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/iomapper.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\iomapper.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/InfoSink.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/InfoSink.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\InfoSink.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Initialize.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Initialize.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\Initialize.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/IntermTraverse.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/IntermTraverse.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\IntermTraverse.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Intermediate.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Intermediate.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\Intermediate.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ParseContextBase.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/ParseContextBase.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\ParseContextBase.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ParseHelper.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/ParseHelper.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\ParseHelper.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/PoolAlloc.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/PoolAlloc.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\PoolAlloc.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/RemoveTree.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/RemoveTree.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\RemoveTree.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Scan.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Scan.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\Scan.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ShaderLang.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/ShaderLang.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\ShaderLang.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/SpirvIntrinsics.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/SpirvIntrinsics.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\SpirvIntrinsics.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/SymbolTable.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/SymbolTable.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\SymbolTable.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Versions.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/Versions.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\Versions.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/intermOut.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/intermOut.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\intermOut.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/limits.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/limits.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\limits.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/linkValidate.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/linkValidate.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\linkValidate.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/parseConst.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/parseConst.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\parseConst.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/reflection.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/reflection.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\reflection.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/Pp.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/Pp.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor\Pp.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpAtom.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/PpAtom.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor\PpAtom.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpContext.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/PpContext.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor\PpContext.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpScanner.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/PpScanner.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor\PpScanner.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpTokens.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/preprocessor/PpTokens.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor\PpTokens.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\preprocessor
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/propagateNoContraction.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/MachineIndependent/propagateNoContraction.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent\propagateNoContraction.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\MachineIndependent
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslAttributes.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslAttributes.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL\hlslAttributes.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslParseHelper.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslParseHelper.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL\hlslParseHelper.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslScanContext.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslScanContext.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL\hlslScanContext.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslOpMap.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslOpMap.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL\hlslOpMap.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslTokenStream.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslTokenStream.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL\hlslTokenStream.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslGrammar.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslGrammar.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL\hlslGrammar.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslParseables.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/HLSL/hlslParseables.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL\hlslParseables.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\HLSL
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/GlslangToSpv.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/GlslangToSpv.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\GlslangToSpv.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/InReadableOrder.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/InReadableOrder.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\InReadableOrder.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/Logger.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/Logger.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\Logger.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvBuilder.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/SpvBuilder.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\SpvBuilder.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvPostProcess.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/SpvPostProcess.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\SpvPostProcess.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/doc.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/doc.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\doc.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvTools.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/SpvTools.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\SpvTools.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/disassemble.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/disassemble.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\disassemble.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/CInterface/spirv_c_interface.cpp.obj: CXX_COMPILER__glslang_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/SPIRV/CInterface/spirv_c_interface.cpp || cmake_object_order_depends_target_glslang
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\CInterface\spirv_c_interface.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/.. -IF:/Vulkan/Vk/build/include
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir\__\SPIRV\CInterface
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glslang
+
+
+#############################################
+# Link the static library _deps\glslang-build\glslang\libglslangd.a
+
+build _deps/glslang-build/glslang/libglslangd.a: CXX_STATIC_LIBRARY_LINKER__glslang_Debug _deps/glslang-build/glslang/CMakeFiles/glslang.dir/CInterface/glslang_c_interface.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/GenericCodeGen/CodeGen.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/GenericCodeGen/Link.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/OSDependent/Windows/ossource.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/glslang_tab.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/attribute.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Constant.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/iomapper.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/InfoSink.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Initialize.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/IntermTraverse.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Intermediate.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ParseContextBase.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ParseHelper.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/PoolAlloc.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/RemoveTree.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Scan.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/ShaderLang.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/SpirvIntrinsics.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/SymbolTable.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/Versions.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/intermOut.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/limits.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/linkValidate.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/parseConst.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/reflection.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/Pp.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpAtom.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpContext.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpScanner.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpTokens.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/MachineIndependent/propagateNoContraction.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslAttributes.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslParseHelper.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslScanContext.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslOpMap.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslTokenStream.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslGrammar.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/HLSL/hlslParseables.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/GlslangToSpv.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/InReadableOrder.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/Logger.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvBuilder.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvPostProcess.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/doc.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/SpvTools.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/disassemble.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang.dir/__/SPIRV/CInterface/spirv_c_interface.cpp.obj
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = _deps\glslang-build\glslang\libglslangd.a
+  TARGET_PDB = glslangd.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glslang-default-resource-limits
+
+
+#############################################
+# Order-only phony target for glslang-default-resource-limits
+
+build cmake_object_order_depends_target_glslang-default-resource-limits: phony || .
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang-default-resource-limits.dir/ResourceLimits/ResourceLimits.cpp.obj: CXX_COMPILER__glslang-default-resource-limits_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/ResourceLimits/ResourceLimits.cpp || cmake_object_order_depends_target_glslang-default-resource-limits
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang-default-resource-limits.dir\ResourceLimits\ResourceLimits.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/..
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang-default-resource-limits.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang-default-resource-limits.dir\ResourceLimits
+
+build _deps/glslang-build/glslang/CMakeFiles/glslang-default-resource-limits.dir/ResourceLimits/resource_limits_c.cpp.obj: CXX_COMPILER__glslang-default-resource-limits_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/ResourceLimits/resource_limits_c.cpp || cmake_object_order_depends_target_glslang-default-resource-limits
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\CMakeFiles\glslang-default-resource-limits.dir\ResourceLimits\resource_limits_c.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  INCLUDES = -IF:/Vulkan/Vk/build/_deps/glslang-src/glslang/..
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang-default-resource-limits.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang-default-resource-limits.dir\ResourceLimits
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glslang-default-resource-limits
+
+
+#############################################
+# Link the static library _deps\glslang-build\glslang\libglslang-default-resource-limitsd.a
+
+build _deps/glslang-build/glslang/libglslang-default-resource-limitsd.a: CXX_STATIC_LIBRARY_LINKER__glslang-default-resource-limits_Debug _deps/glslang-build/glslang/CMakeFiles/glslang-default-resource-limits.dir/ResourceLimits/ResourceLimits.cpp.obj _deps/glslang-build/glslang/CMakeFiles/glslang-default-resource-limits.dir/ResourceLimits/resource_limits_c.cpp.obj
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps\glslang-build\glslang\CMakeFiles\glslang-default-resource-limits.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = _deps\glslang-build\glslang\libglslang-default-resource-limitsd.a
+  TARGET_PDB = glslang-default-resource-limitsd.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glslang-build/glslang/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build\glslang && "C:\Program Files\CMake\bin\cmake-gui.exe" -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/glslang/edit_cache: phony _deps/glslang-build/glslang/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glslang-build/glslang/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build\glslang && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/glslang/rebuild_cache: phony _deps/glslang-build/glslang/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# F:/Vulkan/Vk/build/_deps/glslang-src/glslang/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target OSDependent
+
+
+#############################################
+# Order-only phony target for OSDependent
+
+build cmake_object_order_depends_target_OSDependent: phony || .
+
+build _deps/glslang-build/glslang/OSDependent/Windows/CMakeFiles/OSDependent.dir/__/__/stub.cpp.obj: CXX_COMPILER__OSDependent_unscanned_Debug F$:/Vulkan/Vk/build/_deps/glslang-src/glslang/stub.cpp || cmake_object_order_depends_target_OSDependent
+  CONFIG = Debug
+  DEFINES = -DENABLE_HLSL -DENABLE_OPT=0 -DENABLE_SPIRV -DGLSLANG_OSINCLUDE_WIN32
+  DEP_FILE = _deps\glslang-build\glslang\OSDependent\Windows\CMakeFiles\OSDependent.dir\__\__\stub.cpp.obj.d
+  FLAGS = -g -std=c++17 -Wall -Wmaybe-uninitialized -Wuninitialized -Wunused -Wunused-local-typedefs -Wimplicit-fallthrough -Wunused-parameter -Wunused-value -Wunused-variable -Wunused-but-set-parameter -Wunused-but-set-variable -fno-exceptions -fno-rtti -Werror=deprecated-copy
+  OBJECT_DIR = _deps\glslang-build\glslang\OSDependent\Windows\CMakeFiles\OSDependent.dir
+  OBJECT_FILE_DIR = _deps\glslang-build\glslang\OSDependent\Windows\CMakeFiles\OSDependent.dir\__\__
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target OSDependent
+
+
+#############################################
+# Link the static library _deps\glslang-build\glslang\OSDependent\Windows\libOSDependentd.a
+
+build _deps/glslang-build/glslang/OSDependent/Windows/libOSDependentd.a: CXX_STATIC_LIBRARY_LINKER__OSDependent_Debug _deps/glslang-build/glslang/OSDependent/Windows/CMakeFiles/OSDependent.dir/__/__/stub.cpp.obj
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps\glslang-build\glslang\OSDependent\Windows\CMakeFiles\OSDependent.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = _deps\glslang-build\glslang\OSDependent\Windows\libOSDependentd.a
+  TARGET_PDB = OSDependentd.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glslang-build/glslang/OSDependent/Windows/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build\glslang\OSDependent\Windows && "C:\Program Files\CMake\bin\cmake-gui.exe" -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/glslang/OSDependent/Windows/edit_cache: phony _deps/glslang-build/glslang/OSDependent/Windows/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glslang-build/glslang/OSDependent/Windows/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Vulkan\Vk\build\_deps\glslang-build\glslang\OSDependent\Windows && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SF:\Vulkan\Vk -BF:\Vulkan\Vk\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glslang-build/glslang/OSDependent/Windows/rebuild_cache: phony _deps/glslang-build/glslang/OSDependent/Windows/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
 
+build GenericCodeGen: phony _deps/glslang-build/glslang/libGenericCodeGend.a
+
+build MachineIndependent: phony _deps/glslang-build/glslang/libMachineIndependentd.a
+
+build OSDependent: phony _deps/glslang-build/glslang/OSDependent/Windows/libOSDependentd.a
+
+build SPIRV: phony _deps/glslang-build/SPIRV/libSPIRVd.a
+
+build SPVRemapper: phony _deps/glslang-build/SPIRV/libSPVRemapperd.a
+
 build VkTutorial: phony VkTutorial.exe
 
 build core: phony libcore.a
+
+build glslang: phony _deps/glslang-build/glslang/libglslangd.a
+
+build glslang-default-resource-limits: phony _deps/glslang-build/glslang/libglslang-default-resource-limitsd.a
+
+build libGenericCodeGend.a: phony _deps/glslang-build/glslang/libGenericCodeGend.a
+
+build libMachineIndependentd.a: phony _deps/glslang-build/glslang/libMachineIndependentd.a
+
+build libOSDependentd.a: phony _deps/glslang-build/glslang/OSDependent/Windows/libOSDependentd.a
+
+build libSPIRVd.a: phony _deps/glslang-build/SPIRV/libSPIRVd.a
+
+build libSPVRemapperd.a: phony _deps/glslang-build/SPIRV/libSPVRemapperd.a
+
+build libglslang-default-resource-limitsd.a: phony _deps/glslang-build/glslang/libglslang-default-resource-limitsd.a
+
+build libglslangd.a: phony _deps/glslang-build/glslang/libglslangd.a
 
 # =============================================================================
 # Folder targets.
@@ -193,37 +1027,58 @@ build core: phony libcore.a
 #############################################
 # Folder: F:/Vulkan/Vk/build
 
-build all: phony libcore.a VkTutorial.exe
+build all: phony libcore.a VkTutorial.exe _deps/glslang-build/all
+
+# =============================================================================
+
+#############################################
+# Folder: F:/Vulkan/Vk/build/_deps/glslang-build
+
+build _deps/glslang-build/all: phony _deps/glslang-build/External/all _deps/glslang-build/SPIRV/all _deps/glslang-build/glslang/all
+
+# =============================================================================
+
+#############################################
+# Folder: F:/Vulkan/Vk/build/_deps/glslang-build/External
+
+build _deps/glslang-build/External/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: F:/Vulkan/Vk/build/_deps/glslang-build/SPIRV
+
+build _deps/glslang-build/SPIRV/all: phony _deps/glslang-build/SPIRV/libSPIRVd.a _deps/glslang-build/SPIRV/libSPVRemapperd.a
+
+# =============================================================================
+
+#############################################
+# Folder: F:/Vulkan/Vk/build/_deps/glslang-build/glslang
+
+build _deps/glslang-build/glslang/all: phony _deps/glslang-build/glslang/libGenericCodeGend.a _deps/glslang-build/glslang/libMachineIndependentd.a _deps/glslang-build/glslang/libglslangd.a _deps/glslang-build/glslang/libglslang-default-resource-limitsd.a _deps/glslang-build/glslang/OSDependent/Windows/all
+
+# =============================================================================
+
+#############################################
+# Folder: F:/Vulkan/Vk/build/_deps/glslang-build/glslang/OSDependent/Windows
+
+build _deps/glslang-build/glslang/OSDependent/Windows/all: phony _deps/glslang-build/glslang/OSDependent/Windows/libOSDependentd.a
 
 # =============================================================================
 # Built-in targets
 
 
 #############################################
-# Phony target to force glob verification run.
-
-build F$:/Vulkan/Vk/build/CMakeFiles/VerifyGlobs.cmake_force: phony
-
-
-#############################################
-# Re-run CMake to check if globbed directories changed.
-
-build F$:/Vulkan/Vk/build/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | F$:/Vulkan/Vk/build/CMakeFiles/VerifyGlobs.cmake_force
-  pool = console
-  restat = 1
-
-
-#############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja F$:/Vulkan/Vk/build/cmake_install.cmake: RERUN_CMAKE F$:/Vulkan/Vk/build/CMakeFiles/cmake.verify_globs | C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckIncludeFileCXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.1.1/CMakeCXXCompiler.cmake CMakeFiles/4.1.1/CMakeRCCompiler.cmake CMakeFiles/4.1.1/CMakeSystem.cmake F$:/Vulkan/Vk/build/CMakeFiles/VerifyGlobs.cmake F$:/Vulkan/Vk/CMakeLists.txt F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Config.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3ConfigVersion.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets-debug.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets-release.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets.cmake F$:/vcpkg-2025.08.27/scripts/buildsystems/vcpkg.cmake
+build build.ninja F$:/Vulkan/Vk/build/cmake_install.cmake F$:/Vulkan/Vk/build/_deps/glslang-build/cmake_install.cmake F$:/Vulkan/Vk/build/_deps/glslang-build/External/cmake_install.cmake F$:/Vulkan/Vk/build/_deps/glslang-build/SPIRV/cmake_install.cmake F$:/Vulkan/Vk/build/_deps/glslang-build/glslang/cmake_install.cmake F$:/Vulkan/Vk/build/_deps/glslang-build/glslang/OSDependent/Windows/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckIncludeFileCXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/ExternalProject/shared_internal_commands.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FetchContent.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindGit.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/4.1.1/CMakeCCompiler.cmake CMakeFiles/4.1.1/CMakeCXXCompiler.cmake CMakeFiles/4.1.1/CMakeRCCompiler.cmake CMakeFiles/4.1.1/CMakeSystem.cmake F$:/Vulkan/Vk/CMakeLists.txt F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Config.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3ConfigVersion.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets-debug.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets-release.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets.cmake F$:/vcpkg-2025.08.27/scripts/buildsystems/vcpkg.cmake _deps/glslang-src/CHANGES.md _deps/glslang-src/CMakeLists.txt _deps/glslang-src/External/CMakeLists.txt _deps/glslang-src/SPIRV/CMakeLists.txt _deps/glslang-src/build_info.h.tmpl _deps/glslang-src/glslang/CMakeLists.txt _deps/glslang-src/glslang/OSDependent/Windows/CMakeLists.txt _deps/glslang-src/parse_version.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckIncludeFileCXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.1.1/CMakeCXXCompiler.cmake CMakeFiles/4.1.1/CMakeRCCompiler.cmake CMakeFiles/4.1.1/CMakeSystem.cmake F$:/Vulkan/Vk/build/CMakeFiles/VerifyGlobs.cmake F$:/Vulkan/Vk/CMakeLists.txt F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Config.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3ConfigVersion.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets-debug.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets-release.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets.cmake F$:/vcpkg-2025.08.27/scripts/buildsystems/vcpkg.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckIncludeFileCXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/ExternalProject/shared_internal_commands.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FetchContent.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindGit.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/4.1.1/CMakeCCompiler.cmake CMakeFiles/4.1.1/CMakeCXXCompiler.cmake CMakeFiles/4.1.1/CMakeRCCompiler.cmake CMakeFiles/4.1.1/CMakeSystem.cmake F$:/Vulkan/Vk/CMakeLists.txt F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Config.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3ConfigVersion.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets-debug.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets-release.cmake F$:/vcpkg-2025.08.27/installed/x64-mingw-dynamic/share/glfw3/glfw3Targets.cmake F$:/vcpkg-2025.08.27/scripts/buildsystems/vcpkg.cmake _deps/glslang-src/CHANGES.md _deps/glslang-src/CMakeLists.txt _deps/glslang-src/External/CMakeLists.txt _deps/glslang-src/SPIRV/CMakeLists.txt _deps/glslang-src/build_info.h.tmpl _deps/glslang-src/glslang/CMakeLists.txt _deps/glslang-src/glslang/OSDependent/Windows/CMakeLists.txt _deps/glslang-src/parse_version.cmake: phony
 
 
 #############################################

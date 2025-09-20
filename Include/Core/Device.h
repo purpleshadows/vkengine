@@ -1,7 +1,6 @@
 #pragma once
 
 #include <cstdint>
-#include <optional>
 #include <vector>
 
 #include <vulkan/vulkan_core.h>
@@ -22,7 +21,9 @@ public:
          uint32_t apiVersion = VK_API_VERSION_1_3);
 
   vk::raii::Device &vkDevice() { return device; }
-  vk::raii::PhysicalDevice vkPhysicalDevice() { return physicalDevice; }
+  vk::raii::Device const &vkDevice() const { return device; }
+
+    vk::raii::PhysicalDevice vkPhysicalDevice() { return physicalDevice; }
   const Queues &queues() const { return q; }
   uint32_t api() const { return apiVersion_; }
 
