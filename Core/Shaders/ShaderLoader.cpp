@@ -280,4 +280,4 @@ Core::Shaders::ShaderLoader::get(const Core::Shaders::ShaderKey& key) {
     ShaderHandle handle{ std::move(module), key, 1 };
     auto [it, _] = liveHandles_.emplace(key, handle);
     return it->second;
-}
+} 
